@@ -27,7 +27,7 @@ body {
 .content {
   width: 100%;
   height: calc(100% - 75px);
-  background-image: url("/images/home_waterloo_1.jpg");
+  background-image: url("../images/home_waterloo_1.jpg");
   background-size: cover;
   display: flex;
   align-items: flex-start;
@@ -139,10 +139,10 @@ polygon {
 
 @font-face {
 font-family: "League";
-src:url("/fonts/League.otf") format("opentype");
+src:url("../fonts/League.otf") format("opentype");
 }
 
 @font-face {
     font-family: "fontawesome";
-  src:url("/fonts/Awesome.ttf") format("truetypee");
+  src:url("../fonts/Awesome.ttf") format("truetypee");
 }
