@@ -13,7 +13,7 @@ body {
 
 .header {
   width: 100%;
-  height: 75px;
+  height: 70px;
   background: #17141d;
   opacity: 0.95;
   overflow: hidden;
@@ -114,8 +114,8 @@ polygon {
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding-top: 1.5%;
-  padding-left:  20%;
+  margin-top: 25px;
+  margin-left:  20%;
   padding-right: 0;
   text-decoration: none;
   font-size: 30px;
