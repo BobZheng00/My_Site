@@ -21,29 +21,31 @@ body {
   -moz-box-shadow: #333 1px 3px 4px;
   box-shadow: #333 1px 3px 4px;
   position: fixed;
+  z-index: 1;
   top: 0;
+  text-align: justify;
 }
 
 .content {
   width: 100%;
-  height: calc(100% - 75px);
+  height: 70vh;
   background-image: url("../images/home_waterloo_1.jpg");
+  background-position: top center;
+  background-attachment:scroll;
   background-size: cover;
   display: flex;
   align-items: flex-start;
-
   flex-direction: column;
-  background-color: #8798ab;
+  z-index: 2;
 }
 
 .box {
-  width:35%;
+  width:31%;
   letter-spacing: 2px;
   margin-left: 20%;
   margin-top: 8%;
   padding: 25px;
   color: white;
-  line-height: 20px;
   text-align: left;
   background-color: #17141d;
   opacity: 0.8;
@@ -51,18 +53,17 @@ body {
 
 .box h2{
   font-family: "fontawesome";
-  font-size: 22px;
-
+  font-size: 1.32vw;  /* 50px = 3vw */
 }
 
 .box h1{
   font-family: "League";
-  font-size: 50px;
-  line-height: 35px;
+  font-size: 3vw;
+  line-height: 30px;
 }
 
 .box a{
-  font-size:18px;
+  font-size: 1.08vw;
   letter-spacing: 3px;
 }
 
@@ -95,7 +96,7 @@ ul li {
   color: white;
   cursor: pointer;
   display: inline-block;
-  letter-spacing: 3.5px;
+  letter-spacing: 0.2vw;
   transition: all 0.5s ease-out;
 }
 
@@ -110,15 +111,14 @@ polygon {
   fill: #03a2dc;
 }
 
-.header a {
+.header p {
   float: left;
-  color: #f2f2f2;
-  text-align: center;
-  margin-top: 25px;
+  margin-top: 22px;
   margin-left:  20%;
   padding-right: 0;
   text-decoration: none;
   font-size: 30px;
+
   font-family: "League", serif;
 }
 
