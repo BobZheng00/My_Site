@@ -12,7 +12,7 @@ body {
 }
 
 .header {
-  width: 100%;
+  width: 99%;
   height: 70px;
   background: #17141d;
   opacity: 0.95;
@@ -28,27 +28,27 @@ body {
 
 .content {
   width: 100%;
-  height: 70vh;
+  height: calc(100% - 100px);
   background-image: url("../images/home_waterloo_1.jpg");
   background-position: top center;
   background-attachment:scroll;
   background-size: cover;
-  display: flex;
+  display: inline-flex;
   align-items: flex-start;
-  flex-direction: column;
+  flex-flow: wrap;
   z-index: 2;
 }
 
 .box {
   width:31%;
   letter-spacing: 2px;
-  margin-left: 20%;
+  margin-left: 33%;
   margin-top: 8%;
   padding: 25px;
   color: white;
   text-align: left;
   background-color: #17141d;
-  opacity: 0.8;
+  opacity: 0.83;
 }
 
 .box h2{
@@ -59,12 +59,19 @@ body {
 .box h1{
   font-family: "League";
   font-size: 3vw;
-  line-height: 30px;
+  line-height: 20%;
 }
 
 .box a{
   font-size: 1.08vw;
   letter-spacing: 3px;
+}
+
+.box img{
+  width: 55px;
+  margin: 12px 10px;
+  display: inline-flex;
+  vertical-align: bottom;
 }
 
 svg.line-top {
@@ -123,6 +130,7 @@ polygon {
 }
 
 
+
 @media (max-device-width: 991px) {
   .header {
     height: 64px;
@@ -135,6 +143,110 @@ polygon {
     height: calc(100% - 64px);
   }
 }
+
+
+button {
+
+  position: relative;
+  background: #444;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+  padding: 1rem 3rem;
+  transition: 0.2s;
+  margin: 12px 10px;
+}
+
+button:hover {
+  letter-spacing: 0.2rem;
+  padding: 1.1rem 3.1rem;
+  background: var(--clr);
+  color: var(--clr);
+  /* box-shadow: 0 0 35px var(--clr); */
+  animation: box 3s infinite;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #272822;
+}
+
+button span {
+  position: relative;
+  z-index: 1;
+}
+button i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+button i::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  left: 80%;
+  top: -2px;
+  border: 2px solid var(--clr);
+  background: #272822;
+  transition: 0.2s;
+}
+
+button:hover i::before {
+  width: 15px;
+  left: 20%;
+  animation: move 3s infinite;
+}
+
+button i::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  left: 20%;
+  bottom: -2px;
+  border: 2px solid var(--clr);
+  background: #272822;
+  transition: 0.2s;
+}
+
+button:hover i::after {
+  width: 15px;
+  left: 80%;
+  animation: move 3s infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes box {
+  0% {
+    box-shadow: #27272c;
+  }
+  50% {
+    box-shadow: 0 0 25px var(--clr);
+  }
+  100% {
+    box-shadow: #27272c;
+  }
+}
+
+
 
 
 @font-face {
