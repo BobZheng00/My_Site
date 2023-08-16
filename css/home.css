@@ -381,7 +381,6 @@ button:hover i::after {
   }
 
   .box {
-    margin-left:8%;
     horiz-align: center;
     width: 75%;
   }
@@ -403,14 +402,30 @@ button:hover i::after {
   }
 
   .link-box{
-    margin-left:8%;
     horiz-align: center;
     width: 75%;
     text-align: center;
   }
+
 }
+@media (max-width:500px) {
+    .box h1 {
+    font-size: 20px;
+      letter-spacing: 0;
+  }
 
+  .box h2 {
+    font-size: 12px;
+  }
 
+  .box a {
+    font-size: 10px;
+  }
+  .link-box img {
+    display: none;
+  }
+
+}
 
 @font-face {
 font-family: "League";
