@@ -6,7 +6,7 @@ html {
 
 body {
   height: 100%;
-  background-color: #8798ab;
+  background-image: url("../images/home_background_1.jpg");
   font: 400 10px "Lato", sans-serif;
   text-align: center;
 }
@@ -26,9 +26,10 @@ body {
   text-align: justify;
 }
 
-.content {
+.banner {
   width: 100%;
-  height: calc(100% - 100px);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 90%);
+  padding-bottom: 10%;
   background-image: url("../images/home_waterloo_1.jpg");
   background-position: top center;
   background-attachment:scroll;
@@ -39,11 +40,16 @@ body {
   z-index: 2;
 }
 
+.banner hr{
+  width: 30%;
+  opacity: 0;
+}
+
 .box {
-  width:31%;
+  width:519px;
   letter-spacing: 2px;
-  margin-left: 33%;
-  margin-top: 8%;
+  margin-left: 20%;
+  margin-top: 6%;
   padding: 25px;
   color: white;
   text-align: left;
@@ -51,23 +57,59 @@ body {
   opacity: 0.83;
 }
 
+.link-box {
+  letter-spacing: 2px;
+  margin-left: 20%;
+  padding: 25px;
+  color: white;
+  text-align: left;
+  background-color: #17141d;
+  opacity: 0.83;
+  width: 305px;
+  resize: none;
+  margin-top: 1%;
+}
+
+.photo-box {
+  letter-spacing: 2px;
+  color: white;
+  text-align: left;
+  background-color: #17141d;
+  resize: none;
+  margin: 1% 20px;
+  width: 184px;
+  padding: 5px 5px;
+  height: 270px;
+  opacity: 100%;
+  background-color: rgba(23,20,29,0.8)
+}
+
 .box h2{
-  font-family: "fontawesome";
-  font-size: 1.32vw;  /* 50px = 3vw */
+  font-family: Unispace;
+  margin-top: 0;
+  font-size: 22px;  /* 50px = 3vw */
 }
 
 .box h1{
   font-family: "League";
-  font-size: 3vw;
+  font-size: 50px;
   line-height: 20%;
 }
 
 .box a{
-  font-size: 1.08vw;
+  font-size: 18px;
   letter-spacing: 3px;
 }
 
-.box img{
+
+.photo-box img{
+  width: 55px;
+  margin: 12px 10px;
+  display: inline-flex;
+  vertical-align: bottom;
+}
+
+.link-box img{
   width: 55px;
   margin: 12px 10px;
   display: inline-flex;
@@ -139,7 +181,7 @@ polygon {
   body {
     font-size: 0.4em;
   }
-  .content {
+  .banner {
     height: calc(100% - 64px);
   }
 }
@@ -246,6 +288,127 @@ button:hover i::after {
   }
 }
 
+.column {
+  float: left;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.column h2 {
+  font-size: 1.75vw;
+  margin: 0 0;
+   background: -webkit-linear-gradient(#2284f1, #00b9ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.column p {
+  text-align: left;
+  font-size: 1vw;
+}
+
+.column span {
+  float: left;
+  text-align: left;
+  font-size: 1vw;
+  font-weight: bolder;
+  line-height: 1vw;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  box-sizing: border-box;
+}
+
+.about-me-grid {
+  width: 56%;
+  height: auto;
+  border-radius:15px;
+  /*background-image: url("../images/home_waterloo_1.jpg");*/
+  margin: 2% auto;
+  padding: 1% 2%;
+  background-position: top center;
+  background-attachment:scroll;
+  background-size: cover;
+  background-color: #ecf7ff;
+  display: inline-flex;
+  align-items: flex-start;
+  flex-flow: wrap;
+  z-index: 2;
+}
+
+
+@media (min-width:768px) {
+    .about-me-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width:1173px) {
+    .banner hr {
+      display: block;
+      width: 0;
+    }
+}
+
+
+@media (max-width:850px) {
+  .banner {
+    horiz-align: center;
+    text-align: center;
+  }
+
+  .box {
+    margin-left: 6%;
+  }
+
+  .link-box {
+    margin-left: 6%;
+  }
+}
+
+
+@media (max-width:660px) {
+  .banner {
+    horiz-align: center;
+    text-align: center;
+
+  }
+
+  .box {
+    margin-left:8%;
+    horiz-align: center;
+    width: 75%;
+  }
+
+  .box h1 {
+    font-size: 30px;
+  }
+
+  .box h2 {
+    font-size: 18px;
+  }
+
+  .box a {
+    font-size: 16px;
+  }
+
+  .photo-box{
+    display: none;
+  }
+
+  .link-box{
+    margin-left:8%;
+    horiz-align: center;
+    width: 75%;
+    text-align: center;
+  }
+}
 
 
 

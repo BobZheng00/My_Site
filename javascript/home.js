@@ -79,7 +79,7 @@ for (let i = 0; i < 5; ++i) {
 
 document.getElementById("body").onscroll = function myFunction() {
     var scrolltotop = document.scrollingElement.scrollTop;
-    var target = document.getElementById("content");
+    var target = document.getElementById("banner");
     var xvalue = "center";
     var factor = 0.5;
     var yvalue = scrolltotop * factor;

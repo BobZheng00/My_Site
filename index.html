@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <title>Mr.Bob</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
@@ -38,8 +39,7 @@
          </div>
         </div>
 
-        <div style="height: 75px">
-
+        <div style="height: 65px">
         </div>
 
 
@@ -48,43 +48,75 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     <script src="javascript/home.js"></script>
+    <script src="https://kit.fontawesome.com/cb5ca5da13.js" crossorigin="anonymous"></script>
 
 
-<div class="content" id="content">
+<div class="banner" id="banner">
     <div class="box">
         <h2>Welcome! :) It's me👋</h2>
         <h1>Shenyan (or Bob)</h1>
         <a>Programmer, enjoyer of Minecraft, 1st year CS student @ the University of Waterloo.</a>
     </div>
 
-    <div class="box" style="width: 18%; margin-top: -8%">
+    <hr class="hr">
+
+    <div class="link-box">
 
         <button style="--clr:#ecf7ff" onclick="window.location.href='https://github.com/BobZheng00';"><span>&nbspGithub&nbsp&nbsp</span><i></i></button>
         <img src="./images/github_icon.png"  alt="github"/>
-        <button style="--clr:#00b9ff" onclick="window.location.href='www.linkedin.com/in/shenyan-zheng-0ab064274';"><span>LinkedIn</span><i></i></button>
+        <button style="--clr:#00b9ff" onclick="window.location.href='https://www.linkedin.com/in/shenyan-zheng-0ab064274';"><span>LinkedIn</span><i></i></button>
         <img src="./images/linkedin_icon.png"  alt="linkedin"/>
         <button style="--clr:#f52c2c" onclick="window.location.href='mailto:shenyanzheng00@gmail.com';"><span>&nbsp&nbspEmail&nbsp&nbsp&nbsp</span><i></i></button>
         <img src="./images/gmail_icon.png" />
     </div>
 
-    <div class="box" style="margin: -8% 1%; width: 11%; padding: 0.5% 0.5%; height: 33.5%; opacity: 100%;background-color: rgba(23,20,29,0.8)">
+    <div class="photo-box">
         <img style="width: 90%; opacity: 100%" src="./images/identification_photo.jpg"  alt="identification" />
     </div>
 </div>
 
+        <div class="about-me-grid">
+
+                <div class="column">
+                    <h2>
+                        <i class="fa-sharp fa-solid fa-pen"></i>
+                        <a>Current Courses</a>
+                    </h2>
+                     <p>CS145 - Designing Func Programs (Adv)</p>
+                    <p>MATH 135 - Algebra</p>
+                    <p>MATH 137 - Calculus 1</p>
+                    <p>EMLS 129R - Written Academic English</p>
+                    <p>FINE 130 - Intro Digital Imaging</p>
+                </div>
+
+                <div class="column">
+                    <h2>
+                        <i class="fa-sharp fa-solid fa-code"></i>
+                        <a>Programming Expertise</a>
+                    </h2>
+                    <span style="margin-top: 4%">Languages:&nbsp</span><p>Python, C/C++, SQL (PostgreSQL), HTML, CSS, JavaScript</p>
+                    <span>Frameworks:&nbsp</span><p>Pandas, NumPy, Matplotlib, Django, SDL</p>
+                </div>
+
+<!--                <div class="column">-->
+<!--                    <h2>-->
+<!--                        <i class="fa-sharp fa-solid fa-code"></i>-->
+<!--                        <a>Programming Expertise</a>-->
+<!--                    </h2>-->
+<!--                    <p>Some text..</p>-->
+<!--                </div>-->
+<!--                <div class="column">-->
+<!--                    <h2>-->
+<!--                        <i class="fa-sharp fa-solid fa-code"></i>-->
+<!--                        <a>Programming Expertise</a>-->
+<!--                    </h2>-->
+<!--                    <p>Some text..</p>-->
+<!--                </div>-->
+
+        </div>
 
 
 
-<style>
-    .main {padding:20px; height: 1000px;}
-</style>
-
-<div class="main">
-  <h1>Content</h1>
-  <p>Some content blablabla, some content blablabla.</p>
-  <p>Some content blablabla, some content blablabla.</p>
-  <p>Some content blablabla, some content blablabla.</p>
-</div>
 
 
 </body>
