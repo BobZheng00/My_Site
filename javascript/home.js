@@ -85,3 +85,10 @@ document.getElementById("body").onscroll = function myFunction() {
     var yvalue = scrolltotop * factor;
     target.style.backgroundPosition = xvalue + " " + yvalue + "px";
   }
+
+function scrollToSection(id, offset) {
+	const element = document.getElementById(id);
+	const yOffset = -offset;
+	const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+	window.scrollTo({ top: y, behavior: 'smooth' });
+}

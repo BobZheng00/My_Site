@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/home.css" />
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <title>Mr.Bob</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
@@ -24,8 +25,9 @@
            />
           </svg>
 
-          <ul>
-           <li>Home</li><li>About</li><li>Projects</li><li>Notes</li><li>Blog</li>
+          <ul style="max-width: 750px">
+            <li onclick="location.href='#banner';">Home</li><li onclick="scrollToSection('about', 100)">About</li><li onclick="scrollToSection('projects', 100)">Projects</li><li onclick="scrollToSection('experience', 100)">Experience</li><li>Resume</li>
+
           </ul>
           <svg class="line-bottom" width="750" height="30" viewbox="0,0 1000,40">
            <polygon class="lb" points="5,53 85,53 95,43 105,53 185,53" />
@@ -37,7 +39,7 @@
            <polygon class="lb" points="805,53 885,53 895,43 905,53 985,53" />
           </svg>
          </div>
-        </div>
+    </div>
 
         <div style="height: 65px">
         </div>
@@ -75,18 +77,18 @@
     </div>
 </div>
 
-        <div class="about-me-grid">
+        <div class="about-me-grid" id="about">
 
                 <div class="column">
                     <h2>
                         <i class="fa-sharp fa-solid fa-pen"></i>
                         <a>Current Courses</a>
                     </h2>
-                     <p>CS145 - Designing Func Programs (Adv)</p>
-                    <p>MATH 135 - Algebra</p>
-                    <p>MATH 137 - Calculus 1</p>
-                    <p>EMLS 129R - Written Academic English</p>
-                    <p>FINE 130 - Intro Digital Imaging</p>
+                     <p>CS 246 - Obj-Oriented Soft Dev</p>
+                    <p>CS 245 - Logic & Computation</p>
+                    <p>ECON 101 - Intro Microeconomics</p>
+                    <p>ECON 102 - Intro Macroeconomics</p>
+                    <p>MATH 239 - Intro Combinatorics</p>
                 </div>
 
                 <div class="column">
@@ -94,28 +96,126 @@
                         <i class="fa-sharp fa-solid fa-code"></i>
                         <a>Programming Expertise</a>
                     </h2>
-                    <span style="margin-top: 4%">Languages:&nbsp</span><p>Python, C/C++, SQL (PostgreSQL), HTML, CSS, JavaScript</p>
-                    <span>Frameworks:&nbsp</span><p>Pandas, NumPy, Matplotlib, Django, SDL</p>
+                    <span style="margin-top: 4%">Languages:&nbsp</span><p>JavaScript/TypeScript, Python, C/C++, HTML, CSS,  Shell Script, SQL, R</p>
+                    <span>Frameworks:&nbsp</span><p>Django, Node.js, Pygame, SDL2, React, Express.js, Flask, Pandas, NumPy</p>
+                    <span>Tools:&nbsp</span><p>Linux, Git, Docker, Fly.io, MongoDB, AWS, Google Cloud, Jenkins, Excel, Wix.com</p>
                 </div>
 
-<!--                <div class="column">-->
-<!--                    <h2>-->
-<!--                        <i class="fa-sharp fa-solid fa-code"></i>-->
-<!--                        <a>Programming Expertise</a>-->
-<!--                    </h2>-->
-<!--                    <p>Some text..</p>-->
-<!--                </div>-->
-<!--                <div class="column">-->
-<!--                    <h2>-->
-<!--                        <i class="fa-sharp fa-solid fa-code"></i>-->
-<!--                        <a>Programming Expertise</a>-->
-<!--                    </h2>-->
-<!--                    <p>Some text..</p>-->
-<!--                </div>-->
 
         </div>
 
+    <h2 class="project-main-header" id="projects">My Projects</h2>
+    <div class="projects">
 
+        <div class="project-card">
+            <div class="project-header">
+                <h3>TrendSage</h3>
+            </div>
+            <p class="project-description">TrendSage aims to develop a correlation between stock and cryptocurrency predictions based on the posts or comments on Reddit and the actual market trends...</p>
+            <p class="project-date">May 2024 - present</p>
+            <div class="project-icons">
+                <span><img src="./images/python.svg" /></span>
+                <span><img src="./images/pytorch-ar21.svg" /></span>
+                <span><img src="./images/amazon.svg" /></span>
+                <span><img src="./images/docker.svg" /></span>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-header">
+                <h3>Calendar Channel</h3>
+            </div>
+            <p class="project-description">Calendar Channel, a Django-based web scheduler designed to enhance user interaction. This platform allows users to effortlessly share, block, and download their schedules...</p>
+            <p class="project-date">Aug 2022 - present</p>
+            <div class="project-icons">
+                <span><img src="./images/python.svg" /></span>
+                <span><img src="./images/django.svg" /></span>
+                <span><img src="./images/docker.svg" /></span>
+                <span><img src="./images/postgresql.svg" /></span>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-header">
+<!--                <span class="project-icon">📘</span>-->
+                <h3>DeltaLang Compiler</h3>
+            </div>
+            <p class="project-description">DeltaLang Compiler developed an efficient, state machine-based data structure and algorithm, enhancing scalability and adaptability in token recognition and lexing...</p>
+            <p class="project-date">Jan 2024 - present</p>
+            <div class="project-icons">
+                <span><img src="./images/CPlusPlus.svg" /></span>
+                <span><img src="./images/LLVM-Logo-Derivative-2.png" /></span>
+                <span><img src="./images/742px-Jenkins_logo.svg.png" /></span>
+            </div>
+        </div>
+
+    </div>
+
+<div class="experience" id="experience">
+    <div class="timeline">
+        <h2 class="timeline-header">My Experience</h2>
+        <div class="timeline__event animate__animated animate__fadeInUp animate__delay-3s timeline__event--type1">
+            <div class="timeline__event__icon ">
+                <i class="lni-cake"></i>
+                <div class="timeline__event__date">
+                    May 2024 - present
+                </div>
+            </div>
+            <div class="timeline__event__content ">
+                <div class="timeline__event__title">
+                    AI Software Developer Intern - Machine Learning Project
+                </div>
+                <div class="timeline__event__location">
+                    JuniorKids
+                </div>
+                <div class="timeline__event__description">
+                    <p>• Utilized Python Reddit API Wrapper to gather posts/comments and performed text embedding and sentiment analysis to determine sentiment scores.</p>
+                    <p>• Developed a machine learning model based on BERT using PyTorch to better extract and analyze Reddit posts' sentiment towards stock and cryptocurrency trends and convert to embeddings.</p>
+                    <p>• Utilized Streamlit, Docker, and AWS to create a web-based solution, further automated data fetching and analyze process with Google Cloud for enhanced error detection and efficiency.</p>
+                </div>
+            </div>
+        </div>
+        <div class="timeline__event animate__animated animate__fadeInUp animate__delay-2s timeline__event--type2">
+            <div class="timeline__event__icon">
+                <i class="lni-burger"></i>
+                <div class="timeline__event__date">
+                    Feb 2024 - Present
+                </div>
+            </div>
+            <div class="timeline__event__content">
+                <div class="timeline__event__title">
+                    IT Developer and Tech Support
+                </div>
+                <div class="timeline__event__location">
+                    Domestic Violence Victim’s Alliance
+                </div>
+                <div class="timeline__event__description">
+                    <p>• Spearhead the deployment of workbook automation using Google’s Apps Script to enhance procedural efficiencies and
+                        streamline IT operations.</p>
+                    <p>• Provide hardware and software technical support, resolving issues for volunteers when training and using scheduling app.</p>
+                </div>
+            </div>
+        </div>
+        <div class="timeline__event animate__animated animate__fadeInUp animate__delay-1s timeline__event--type3">
+            <div class="timeline__event__icon">
+                <i class="lni-burger"></i>
+                <div class="timeline__event__date">
+                    Oct 2022 - Jun 2023
+                </div>
+            </div>
+            <div class="timeline__event__content">
+                <div class="timeline__event__title">
+                    Engineering Club Executive - Event Coordinator
+                </div>
+                <div class="timeline__event__location">
+                    Mentor College
+                </div>
+                <div class="timeline__event__description">
+                    <p>• Managed the Engineering Club’s members, events, and budget through tracking and allocation in Excel</p>
+                    <p>• Proactively communicated with colleagues, supervisory teachers, and the school board to ensure transparent and compliant execution of all club activities, facilitating smooth operations and fostering a collaborative environment.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
