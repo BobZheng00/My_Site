@@ -1,223 +1,647 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/home.css" />
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <title>Mr.Bob</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bob Zheng | Software Engineer &amp; AI Researcher</title>
+  <meta name="description" content="Shenyan (Bob) Zheng, Computer Science at the University of Waterloo. Software engineering and AI research: agentic systems, ML infrastructure and full-stack products.">
+  <link rel="canonical" href="https://bobzheng.com/">
+  <meta name="theme-color" content="#efeee7">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Bob Zheng">
+  <meta property="og:title" content="Bob Zheng | Software Engineer &amp; AI Researcher">
+  <meta property="og:description" content="Computer Science at the University of Waterloo. Software engineering and AI research: agentic systems, ML infrastructure and full-stack products.">
+  <meta property="og:url" content="https://bobzheng.com/">
+  <meta property="og:image" content="https://bobzheng.com/assets/img/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..600&amp;family=Montserrat:wght@500..800&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/site.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shenyan (Bob) Zheng",
+    "alternateName": "Bob Zheng",
+    "url": "https://bobzheng.com/",
+    "jobTitle": "Software Engineer",
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "University of Waterloo" },
+    "sameAs": [
+      "https://github.com/BobZheng00",
+      "https://www.linkedin.com/in/shenyan-zheng-0ab064274/",
+      "https://arxiv.org/abs/2601.12758"
+    ]
+  }
+  </script>
 </head>
-<body id="body">
+<body>
+  <a class="skip" href="#main">Skip to content</a>
 
-    <div class="header">
-        <p style="color: #03a2dc">MR.BOB</p>
-         <div class="menu">
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow" viewBox="0 0 16 16"><path d="M1.5 8h12M9 3.5 13.5 8 9 12.5"/></symbol>
+    <symbol id="i-ext" viewBox="0 0 16 16"><path d="M4 12 12 4M5.5 4H12v6.5"/></symbol>
+    <symbol id="i-down" viewBox="0 0 16 16"><path d="M8 1.5v11M3.5 8 8 12.5 12.5 8M2 15h12"/></symbol>
+  </svg>
 
-          <svg class="line-top" width="750" height="15" viewbox="0,0 1000,20">
-           <line
-            class="line-dash"
-            x1="-30"
-            y1="15"
-            x2="1000"
-            y2="15"
-            style="stroke: #03a2dc; stroke-width:2; stroke-linecap:round; stroke-dasharray: 180,1200; stroke-dashoffset: -35;"
-           />
-          </svg>
+  <!-- ===================================================================== Header -->
+  <header class="bar">
+    <div class="bar__inner">
+      <a class="brand" href="#top">
+        <span class="brand__mark" aria-hidden="true">BZ</span>
+        <span class="brand__text">
+          <span class="brand__name">Bob Zheng</span>
+          <span class="brand__tag">Software engineering · AI research</span>
+        </span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Sections">
+        <ol class="nav__list">
+          <li><a class="nav__link" href="#profile"><span class="nav__n">01</span>Profile</a></li>
+          <li><a class="nav__link" href="#experience"><span class="nav__n">02</span>Experience</a></li>
+          <li><a class="nav__link" href="#research"><span class="nav__n">03</span>Research</a></li>
+          <li><a class="nav__link" href="#projects"><span class="nav__n">04</span>Projects</a></li>
+          <li><a class="nav__link" href="#skills"><span class="nav__n">05</span>Skills</a></li>
+          <li><a class="nav__link" href="#contact"><span class="nav__n">06</span>Contact</a></li>
+        </ol>
+      </nav>
+      <a class="bar__cta" href="assets/docs/Shenyan_Bob_Zheng_Resume.pdf">Resume<svg class="ico" aria-hidden="true"><use href="#i-down"/></svg></a>
+      <button class="menu" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    </div>
+  </header>
 
-          <ul style="max-width: 750px;">
-            <li onclick="location.href='#banner';">Home</li><li onclick="scrollToSection('about', 100)">About</li><li onclick="scrollToSection('projects', 100)">Projects</li><li onclick="scrollToSection('experience', 100)">Experience</li><li onclick="location.href='https://drive.google.com/file/d/1Xv1emtWfVuxZHOrFPuF5YmCgwcNc3AUj/view?usp=sharing';">Resume</li>
+  <!-- Fixed index rule (desktop): the lime marker shows scroll position -->
+  <div class="rule" aria-hidden="true"><i class="rule__marker"></i></div>
 
+  <main id="main" tabindex="-1">
+
+    <!-- =================================================================== Hero -->
+    <section class="hero" id="top" aria-labelledby="hero-name">
+      <svg class="rings" viewBox="0 0 800 800" aria-hidden="true" focusable="false">
+        <circle cx="400" cy="400" r="398"/>
+        <circle cx="400" cy="400" r="318"/>
+        <circle cx="400" cy="400" r="238"/>
+        <circle cx="400" cy="400" r="158"/>
+        <circle cx="400" cy="400" r="78"/>
+        <path class="rings__arc" d="M318.6 623.6A238 238 0 0 1 184.3 500.6"/>
+        <rect class="rings__dot" x="180.3" y="496.6" width="8" height="8"/>
+      </svg>
+
+      <div class="frame">
+        <div class="frame__side">
+          <p class="hero__index"><span class="dash" aria-hidden="true"></span>Index</p>
+          <dl class="facts facts--side">
+            <div><dt>Base</dt><dd>Waterloo, Ontario</dd></div>
+            <div><dt>Coordinates</dt><dd>43.47° N, 80.54° W</dd></div>
+          </dl>
+        </div>
+
+        <div class="frame__main hero__main">
+          <div class="nametag nametag--hero">
+            <p class="nametag__role">Software Engineer / AI Researcher</p>
+            <h1 class="nametag__name" id="hero-name">Bob Zheng</h1>
+            <p class="nametag__cred"><b>BCS</b> in Computer Science · University of Waterloo</p>
+          </div>
+
+          <p class="hero__lede">I build agentic AI systems, ML pipelines and the full-stack products around them.</p>
+
+          <div class="hero__actions">
+            <a class="btn" href="#experience">View experience<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn--quiet" href="assets/docs/Shenyan_Bob_Zheng_Resume.pdf">Resume (PDF)<svg class="ico" aria-hidden="true"><use href="#i-down"/></svg></a>
+          </div>
+
+          <ul class="links">
+            <li><a href="https://github.com/BobZheng00">GitHub<svg class="ico" aria-hidden="true"><use href="#i-ext"/></svg></a></li>
+            <li><a href="https://www.linkedin.com/in/shenyan-zheng-0ab064274/">LinkedIn<svg class="ico" aria-hidden="true"><use href="#i-ext"/></svg></a></li>
+            <li><a href="https://arxiv.org/abs/2601.12758">arXiv<svg class="ico" aria-hidden="true"><use href="#i-ext"/></svg></a></li>
+            <li><a href="mailto:b63zheng@uwaterloo.ca">Email<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
           </ul>
-          <svg class="line-bottom" width="750" height="30" viewbox="0,0 1000,40">
-           <polygon class="lb" points="5,53 85,53 95,43 105,53 185,53" />
-           <polygon class="lb" points="205,53 285,53 295,43 305,53 385,53" />
 
-           <polygon class="lb" points="405,53 485,53 495,43 505,53 585,53" />
+          <p class="hero__status"><span class="lamp" aria-hidden="true"></span><span class="hero__status-k">Now</span><span data-current data-fallback="BCS student, University of Waterloo">Software Engineer, Carta · Research Assistant, UW HCI Lab</span></p>
+        </div>
+      </div>
+    </section>
 
-           <polygon class="lb" points="605,53 685,53 695,43 705,53 785,53" />
-           <polygon class="lb" points="805,53 885,53 895,43 905,53 985,53" />
-          </svg>
-         </div>
+    <!-- ================================================================ Profile -->
+    <section class="section" id="profile" aria-labelledby="profile-title">
+      <div class="frame">
+        <div class="frame__side">
+          <div class="block">
+            <p class="block__tab">Section 01</p>
+            <p class="block__code" aria-hidden="true">PRFL</p>
+            <h2 class="block__name" id="profile-title">Profile section</h2>
+          </div>
+          <p class="side-note">University of Waterloo<br>BCS · 2023–2028</p>
+        </div>
+
+        <div class="frame__main">
+          <p class="lead">I work where large language models meet real software: agents that act through typed tools, research on aligning models at inference time, the ML infrastructure underneath, and the products that put it all in front of people.</p>
+          <p class="body measure">Through roles at Carta, TD and Eon Media, and research with Prof. Edith Law (UW HCI Lab) and Prof. Usman Naseem (Macquarie University), I’ve shipped text-to-SQL data tooling, multi-agent prototypes, media-understanding pipelines and an accessibility scanner. I also first-authored VISPA, a paper accepted to the EMNLP 2026 Main Conference.</p>
+
+          <div class="cols">
+            <dl class="facts">
+              <div><dt>Program</dt><dd>Bachelor of Computer Science</dd></div>
+              <div><dt>Institution</dt><dd>University of Waterloo</dd></div>
+              <div><dt>Term</dt><dd>Sep 2023 – Apr 2028 (expected)</dd></div>
+              <div><dt>Cumulative GPA</dt><dd>93.66 / 100 (3.98 / 4.0)</dd></div>
+              <div><dt>Base</dt><dd>Waterloo · Toronto, Ontario</dd></div>
+              <div><dt>Focus</dt><dd>Agentic systems, LLM alignment, ML infrastructure, full-stack</dd></div>
+            </dl>
+
+            <div class="stack-v">
+              <section class="list-block" aria-labelledby="current-title">
+                <h3 class="label" id="current-title">Current</h3>
+                <ul class="current">
+                  <li data-start="2026-09" data-end="2026-12"><span class="lamp" aria-hidden="true"></span><span><b>Carta</b><br>Software Engineer, Data Ecosystem</span></li>
+                  <li data-start="2026-05" data-end="present"><span class="lamp" aria-hidden="true"></span><span><b>UW HCI Lab</b><br>Undergraduate Research Assistant</span></li>
+                  <li class="current__fallback"><span class="lamp" aria-hidden="true"></span><span><b>University of Waterloo</b><br>Bachelor of Computer Science</span></li>
+                </ul>
+              </section>
+              <section class="list-block" aria-labelledby="edu-title">
+                <h3 class="label" id="edu-title">Education</h3>
+                <ul class="dated">
+                  <li><span class="dated__when">2023–28</span><span><b>University of Waterloo</b><br>Bachelor of Computer Science</span></li>
+                  <li><span class="dated__when">2019–23</span><span><b>Mentor College</b><br>Ontario Secondary School Diploma</span></li>
+                </ul>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= Experience -->
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="frame">
+        <div class="frame__side">
+          <div class="block">
+            <p class="block__tab">Section 02</p>
+            <p class="block__code" aria-hidden="true">EXPR</p>
+            <h2 class="block__name" id="experience-title">Experience section</h2>
+          </div>
+          <p class="side-note">7 roles<br>2024 – present</p>
+        </div>
+
+        <div class="frame__main">
+          <ol class="records">
+            <li class="rec is-active" data-start="2026-09" data-end="2026-12" data-short="Software Engineer, Carta">
+              <div class="nametag">
+                <p class="nametag__role">Software Engineer</p>
+                <h3 class="nametag__name">Carta</h3>
+                <p class="nametag__cred"><span class="status" data-status>Active</span>Data Ecosystem · Waterloo, ON</p>
+                <p class="nametag__when"><time datetime="2026-09">Sep 2026</time> – <time datetime="2026-12">Dec 2026</time></p>
+              </div>
+              <ul class="points">
+                <li>Improving data quality for a Snowflake Cortex text-to-SQL agent served over MCP: profiling client queries, enriching semantic views with metrics, dimensions and verified questions, and building benchmarks and regression tests.</li>
+                <li>Streamlined API-docs CI/CD with CircleCI validation, automated upstream PRs and Jenkins auto-deploy on merge.</li>
+              </ul>
+              <p class="stackline">Snowflake Cortex · Text-to-SQL · MCP · CircleCI · Jenkins</p>
+            </li>
+
+            <li class="rec is-active" data-start="2026-05" data-end="present" data-short="Research Assistant, UW HCI Lab">
+              <div class="nametag">
+                <p class="nametag__role">Undergraduate Research Assistant</p>
+                <h3 class="nametag__name">UW HCI Lab</h3>
+                <p class="nametag__cred"><span class="status" data-status>Active</span>With Prof. Edith Law · Waterloo, ON</p>
+                <p class="nametag__when"><time datetime="2026-05">May 2026</time> – Present</p>
+              </div>
+              <ul class="points">
+                <li>Investigating student-directed multi-agent orchestration for learning: shipped a platform where a student coordinates a persistent study companion and per-subject tutor agents against self-defined goals.</li>
+                <li>Designed the conversation-history layer that keeps long sessions in context: rolling compaction folds old turns into a running summary behind an advancing watermark, over a scoped memory store the agent mutates through remember / recall / update tools.</li>
+                <li>Made the LLM an actor over the domain via typed tool-calling (quest-board writes, memory, workspace files with PDF extraction, assessment logging), so agent turns persist real state rather than text.</li>
+              </ul>
+              <p class="stackline">Multi-agent systems · Tool calling · Agent memory · HCI</p>
+            </li>
+
+            <li class="rec" data-start="2026-01" data-end="2026-04" data-short="Software Developer, TD">
+              <div class="nametag">
+                <p class="nametag__role">Software Developer</p>
+                <h3 class="nametag__name">TD</h3>
+                <p class="nametag__cred"><span class="status" data-status>Complete</span>Enterprise Innovation · Toronto, ON</p>
+                <p class="nametag__when"><time datetime="2026-01">Jan 2026</time> – <time datetime="2026-04">Apr 2026</time></p>
+              </div>
+              <ul class="points">
+                <li>Built an Accessibility Scanner browser extension in TypeScript (Vite, Express.js) to automate enterprise-wide web accessibility and compliance checks across internal web properties.</li>
+                <li>Architected a PostgreSQL database with optimized indexing for scan-result retrieval and eligible-domain lookup; maintained the Jenkins CI/CD pipeline with Vitest unit tests, coverage thresholds and security scans.</li>
+                <li>Contributed to a proof-of-concept multi-agent design system on Google ADK and Anthropic models, where ADK agents coordinate via A2A and function calling to delegate sub-tasks to specialized agents.</li>
+                <li>Built collaboration features on GCS and Firestore and enabled bidirectional sync between code prototypes and Figma via MCP and REST, with custom parsers that compressed Figma context by 50% for LLM consumption.</li>
+                <li>Studied ROS and experimented with a humanoid service robot’s 2D LiDAR and sonar sensors, tuning costmaps and path planning to prototype in-person scenarios such as customer greeting and appointment check-in.</li>
+              </ul>
+              <p class="stackline">TypeScript · PostgreSQL · Jenkins · Google ADK · A2A · MCP · Firestore · ROS</p>
+            </li>
+
+            <li class="rec" data-start="2025-09" data-end="2026-08" data-short="Research Assistant, Macquarie University">
+              <div class="nametag">
+                <p class="nametag__role">NLP Research Assistant</p>
+                <h3 class="nametag__name">Macquarie University</h3>
+                <p class="nametag__cred"><span class="status" data-status>Complete</span>With Prof. Usman Naseem · Remote</p>
+                <p class="nametag__when"><time datetime="2025-09">Sep 2025</time> – <time datetime="2026-08">Aug 2026</time></p>
+              </div>
+              <ul class="points">
+                <li>First-authored <a href="#research">VISPA</a>, a training-free pluralistic alignment framework accepted to the EMNLP 2026 Main Conference, replacing costly multi-model ensembles with modular, value-steered generation on a single frozen backbone.</li>
+                <li>Engineered the inference system: DeBERTa-based NLI classifiers rank human values, then PyTorch latent-space manipulation injects value directions into intermediate LLM activations at inference time.</li>
+              </ul>
+              <p class="stackline">PyTorch · Representation engineering · DeBERTa · NLI · Alignment</p>
+            </li>
+
+            <li class="rec" data-start="2024-09" data-end="2025-05" data-short="ML Engineer, Eon Media">
+              <div class="nametag">
+                <p class="nametag__role">AI / ML Engineer, Co-op</p>
+                <h3 class="nametag__name">Eon Media</h3>
+                <p class="nametag__cred"><span class="status" data-status>Complete</span>Toronto, ON</p>
+                <p class="nametag__when"><time datetime="2024-09">Sep 2024</time> – <time datetime="2025-05">May 2025</time></p>
+              </div>
+              <ul class="points">
+                <li>Optimized face and logo detection with YOLOv8 and Dlib, improving media-indexing accuracy and speed.</li>
+                <li>Shipped transcript chunking with all-MiniLM-L12 and fine-tuned Mistral-7B to summarize media into searchable segments.</li>
+                <li>Built a Flask backend for pipeline health monitoring and MLOps: dataset management and automated training and evaluation.</li>
+                <li>Cut AWS EKS pod-creation and runtime cost through container right-sizing, algorithmic optimizations and leaner AWS API usage; improved scalability with Docker, Kubernetes and ECR/EKS.</li>
+                <li>Developed multi-player tracking for sports video using Deep SORT with a custom ImageNet-based feature extractor, plus team and jersey-number recognition and key-moment detection.</li>
+                <li>Led a proof of concept for Cumulus Media: word-level-timestamped transcription with Whisper, radio diarization with pyannote, and speaker clustering and identification with scikit-learn to unlock voice-based asset monetization.</li>
+              </ul>
+              <p class="stackline">YOLOv8 · Mistral-7B · Flask · Kubernetes · AWS EKS · Deep SORT · Whisper · pyannote</p>
+            </li>
+
+            <li class="rec" data-start="2024-09" data-end="2024-12" data-short="Research Assistant, University of Waterloo">
+              <div class="nametag">
+                <p class="nametag__role">HCI Research Assistant</p>
+                <h3 class="nametag__name">University of Waterloo</h3>
+                <p class="nametag__cred"><span class="status" data-status>Complete</span>Waterloo, ON</p>
+                <p class="nametag__when"><time datetime="2024-09">Sep 2024</time> – <time datetime="2024-12">Dec 2024</time></p>
+              </div>
+              <ul class="points">
+                <li>Designed and piloted a user study with a Figma prototype to evaluate curiosity-driven learning and navigation behaviours.</li>
+                <li>Engineered PCuri, a Chrome extension (Node.js, WXT) that turns browsing history into a knowledge graph: KeyBERT keyword extraction, near-duplicate merging with SequenceMatcher, and edges from thresholded co-occurrence.</li>
+                <li>Integrated Vercel AI to generate research-question prompts and chat guidance that reference specific graph nodes.</li>
+              </ul>
+              <p class="stackline">User studies · Figma · WXT · KeyBERT · Knowledge graphs</p>
+            </li>
+
+            <li class="rec" data-start="2024-05" data-end="2024-09" data-short="AI Developer Intern, JuniorKids">
+              <div class="nametag">
+                <p class="nametag__role">AI Software Developer Intern</p>
+                <h3 class="nametag__name">JuniorKids</h3>
+                <p class="nametag__cred"><span class="status" data-status>Complete</span>Remote</p>
+                <p class="nametag__when"><time datetime="2024-05">May 2024</time> – <time datetime="2024-09">Sep 2024</time></p>
+              </div>
+              <ul class="points">
+                <li>Gathered Reddit posts and comments via API and filtered them with spaCy named-entity recognition; fine-tuned a BERT model on historical posts for sentiment scoring.</li>
+                <li>Configured an LSTM to predict stock trends from sentiment scores, price trends and financial indicators.</li>
+                <li>Deployed scheduled cloud functions that store financial and social-media data in PostgreSQL and MongoDB.</li>
+                <li>Integrated RAG into a chatbot that answers in natural language using the latest market news and insider activity.</li>
+                <li>Earlier in the term: forecast clothing demand with LSTM models and streamlined competitor research across 500+ brands with the Similarweb API.</li>
+              </ul>
+              <p class="stackline">BERT · spaCy · LSTM · RAG · PostgreSQL · MongoDB</p>
+            </li>
+          </ol>
+
+          <section class="earlier" aria-labelledby="earlier-title">
+            <h3 class="label" id="earlier-title">Volunteer &amp; leadership</h3>
+            <table class="table">
+              <thead><tr><th scope="col">Period</th><th scope="col">Role</th><th scope="col">Organization</th><th scope="col">Notes</th></tr></thead>
+              <tbody>
+                <tr><td>2024</td><td>IT Developer &amp; Tech Support (volunteer)</td><td>Domestic Violence Victim’s Alliance, Waterloo</td><td>Automated workbooks with Google Apps Script; supported volunteers on hardware, software and the scheduling app.</td></tr>
+                <tr><td>2022–23</td><td>Engineering Club Executive, Event Coordinator</td><td>Mentor College, Mississauga</td><td>Managed members, events and budget; planned workshops and races with teachers and the school board.</td></tr>
+                <tr><td>2020–23</td><td>Outreach Club Member</td><td>Mississauga</td><td>Volunteered at Compass Food Bank and Youth Without Shelter; helped plan club events.</td></tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================================== Research -->
+    <section class="section section--sunk" id="research" aria-labelledby="research-title">
+      <div class="frame">
+        <div class="frame__side">
+          <div class="block">
+            <p class="block__tab">Section 03</p>
+            <p class="block__code" aria-hidden="true">RSCH</p>
+            <h2 class="block__name" id="research-title">Research section</h2>
+          </div>
+          <p class="side-note">1 publication<br>3 research threads</p>
+        </div>
+
+        <div class="frame__main">
+          <article class="paper" aria-labelledby="vispa-title">
+            <p class="flag">Accepted · EMNLP 2026 Main Conference</p>
+            <h3 class="paper__title" id="vispa-title"><span class="paper__acronym">VISPA</span><span class="paper__full">Pluralistic Alignment via Automatic Value Selection and Activation</span></h3>
+            <p class="paper__authors"><b>Shenyan Zheng</b>, Jiayou Zhong, Anudeex Shetty, Heng Ji, Preslav Nakov, Usman Naseem</p>
+            <p class="body measure">High-stakes uses of language models need outputs that reflect a plurality of human values, not an averaged preference. VISPA is training-free: it automatically selects the values relevant to a prompt and activates them inside a single frozen model, replacing costly multi-model ensembles with modular, value-steered generation.</p>
+
+            <ol class="steps">
+              <li><span class="steps__n">01</span><span class="steps__k">Select</span><span class="steps__v">DeBERTa-based NLI classifiers rank the human values relevant to a prompt.</span></li>
+              <li><span class="steps__n">02</span><span class="steps__k">Steer</span><span class="steps__v">Value directions are injected into intermediate activations of a frozen LLM.</span></li>
+              <li><span class="steps__n">03</span><span class="steps__k">Generate</span><span class="steps__v">Responses reflect the selected values, with no fine-tuning and no model ensemble.</span></li>
+            </ol>
+
+            <figure class="figure">
+              <svg class="schematic" viewBox="0 0 640 300" role="img" aria-labelledby="fig-title">
+                <title id="fig-title">Simplified schematic: a value ranker selects top-k values for a prompt, and their directions are added to one intermediate layer of a frozen language model.</title>
+                <rect class="s-box" x="0" y="168" width="92" height="44"/>
+                <text class="s-label" x="46" y="195" text-anchor="middle">PROMPT</text>
+                <path class="s-line" d="M46 168V60h96"/>
+                <rect class="s-box" x="142" y="36" width="200" height="48"/>
+                <text class="s-label" x="242" y="57" text-anchor="middle">VALUE RANKER</text>
+                <text class="s-sub" x="242" y="73" text-anchor="middle">NLI · DeBERTa</text>
+                <path class="s-line" d="M342 60h22"/>
+                <text class="s-sub" x="364" y="28">TOP-K VALUES</text>
+                <rect class="s-chip" x="364" y="47" width="34" height="26"/><text class="s-chip-t" x="381" y="64" text-anchor="middle">v1</text>
+                <rect class="s-chip" x="404" y="47" width="34" height="26"/><text class="s-chip-t" x="421" y="64" text-anchor="middle">v2</text>
+                <rect class="s-chip" x="444" y="47" width="34" height="26"/><text class="s-chip-t" x="461" y="64" text-anchor="middle">v3</text>
+                <path class="s-inject" d="M421 73v41H340v28"/>
+                <path class="s-inject-head" d="m334 136 6 8 6-8"/>
+                <text class="s-eq" x="330" y="132" text-anchor="end">h ← h + α·v</text>
+                <path class="s-line" d="M92 190h416"/>
+                <g class="s-layers">
+                  <rect x="140" y="148" width="24" height="84"/><rect x="186" y="148" width="24" height="84"/>
+                  <rect x="232" y="148" width="24" height="84"/><rect x="278" y="148" width="24" height="84"/>
+                  <rect class="is-hit" x="328" y="148" width="24" height="84"/><rect x="378" y="148" width="24" height="84"/>
+                  <rect x="424" y="148" width="24" height="84"/><rect x="470" y="148" width="24" height="84"/>
+                </g>
+                <text class="s-sub" x="152" y="250" text-anchor="middle">L1</text>
+                <text class="s-sub" x="198" y="250" text-anchor="middle">L2</text>
+                <text class="s-sub s-hit" x="340" y="250" text-anchor="middle">Lk</text>
+                <text class="s-sub" x="482" y="250" text-anchor="middle">Ln</text>
+                <path class="s-rule" d="M140 264v6h354v-6"/>
+                <text class="s-sub" x="317" y="290" text-anchor="middle">FROZEN LLM · NO TRAINING</text>
+                <path class="s-line" d="M494 190h30"/>
+                <path class="s-line" d="m518 184 6 6-6 6"/>
+                <rect class="s-box s-box--out" x="526" y="168" width="114" height="44"/>
+                <text class="s-label s-label--inv" x="583" y="188" text-anchor="middle">RESPONSE</text>
+                <text class="s-sub s-sub--inv" x="583" y="203" text-anchor="middle">value-steered</text>
+              </svg>
+              <figcaption>Fig. 1. A simplified schematic of the method. See the paper for the full formulation.</figcaption>
+            </figure>
+
+            <p class="actions-row">
+              <a class="btn" href="https://arxiv.org/abs/2601.12758">Read on arXiv<svg class="ico" aria-hidden="true"><use href="#i-ext"/></svg></a>
+              <a class="btn btn--quiet" href="https://github.com/BobZheng00/pluralistic-vispa">Code<svg class="ico" aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </p>
+          </article>
+
+          <section class="threads" aria-labelledby="threads-title">
+            <h3 class="label" id="threads-title">Research threads</h3>
+            <ul class="dated dated--wide">
+              <li><span class="dated__when">Since 2026</span><span><b>Student-directed multi-agent orchestration for learning</b><br>UW HCI Lab, with Prof. Edith Law</span></li>
+              <li><span class="dated__when">2025–26</span><span><b>Pluralistic alignment and representation engineering</b><br>Macquarie University, with Prof. Usman Naseem</span></li>
+              <li><span class="dated__when">2024</span><span><b>Curiosity-driven learning and browsing knowledge graphs</b><br>University of Waterloo, HCI</span></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================================== Projects -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="frame">
+        <div class="frame__side">
+          <div class="block">
+            <p class="block__tab">Section 04</p>
+            <p class="block__code" aria-hidden="true">PROJ</p>
+            <h2 class="block__name" id="projects-title">Projects section</h2>
+          </div>
+          <p class="side-note">11 projects<br>2022–2026</p>
+        </div>
+
+        <div class="frame__main">
+          <article class="panel" aria-labelledby="oris-title">
+            <div class="nametag">
+              <p class="nametag__role">Featured · AI tutoring platform</p>
+              <h3 class="nametag__name" id="oris-title">ORIS</h3>
+              <p class="nametag__cred">An agentic voice tutor that drives the lesson itself</p>
+              <p class="nametag__when"><time datetime="2025-01">Jan 2025</time> – <time datetime="2026-05">May 2026</time></p>
+            </div>
+            <ul class="points">
+              <li>Architected an agentic voice tutor on LiveKit Agents with custom tool-calling for material navigation, pacing and Q&amp;A hand-off, letting the agent drive the lecture flow without constant user input.</li>
+              <li>Designed a sequence-ordered state-sync protocol over LiveKit data channels for real-time slide and annotation updates across browser, FastAPI orchestrator and agent worker, with request/ack confirmation on agent-initiated actions.</li>
+              <li>Shipped an automatic course-indexing pipeline that ingests study materials, then chunks, embeds and indexes them in FAISS for RAG; generated course outlines and slides via Claude (Anthropic API) with structured tool use.</li>
+              <li>Designed and built the responsive front end with Next.js, Radix UI and Framer Motion for smooth classroom and course-dashboard interactions.</li>
+            </ul>
+            <dl class="facts facts--inline">
+              <div><dt>Revision 1</dt><dd>Vapi voice SDK, Flask, WebSockets, AWS S3, Gemini 2.5 Pro</dd></div>
+              <div><dt>Revision 2</dt><dd>LiveKit Agents, FastAPI orchestrator, Claude (Anthropic API), FAISS</dd></div>
+            </dl>
+          </article>
+
+          <div class="index">
+            <details class="op">
+              <summary><span class="op__row"><span class="op__n">10</span><span class="op__name">Doctor Llama</span><span class="op__brief">Multi-agent medical assistant</span><span class="op__year">2024</span><span class="op__toggle" aria-hidden="true"></span></span></summary>
+              <div class="op__body">
+                <p class="op__meta">MetaLlamaHack 2024 · Nov 2024 · Llama, RAG, Streamlit</p>
+                <ul class="points">
+                  <li>Built a multi-agent medical assistant with voice interaction, real-time transcription and medical-term extraction via Clinical-AI-Apollo/Medical-NER.</li>
+                  <li>Implemented a RAG agent using the PubMed API and fine-tuned Llama3-OpenBioLLM-70B to answer symptom- and disease-related questions.</li>
+                  <li>Developed a vision agent that retrieves medical images via DuckDuckGo and uses Llama-3.2-11B-Vision to write accessible, patient-friendly descriptions.</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="op">
+              <summary><span class="op__row"><span class="op__n">09</span><span class="op__name">UWPilot</span><span class="op__brief">Course planner and prerequisite visualizer</span><span class="op__year">2024–25</span><span class="op__toggle" aria-hidden="true"></span></span></summary>
+              <div class="op__body">
+                <p class="op__meta">Desktop app · Sep 2024 – Jan 2025 · Kotlin, Jetpack Compose, Ktor</p>
+                <ul class="points">
+                  <li>Built a cross-platform desktop app in Kotlin and Jetpack Compose Desktop with a multi-module architecture for UWaterloo course planning and prerequisite visualization.</li>
+                  <li>Integrated the UWaterloo Open Data API via Ktor and coroutines for real-time course schedule and enrollment data.</li>
+                  <li>Implemented persistence with SQLDelight and MongoDB for user profiles and multi-term course tracking; shipped email and calendar features with Jakarta Mail.</li>
+                  <li>Designed the UI in Figma, with custom theming, sidebar navigation and interactive prerequisite graphs via Compose state, and packaged Windows, macOS and Linux builds with Gradle.</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="op">
+              <summary><span class="op__row"><span class="op__n">08</span><span class="op__name">Fin4All</span><span class="op__brief">All-in-one investment assistant</span><span class="op__year">2024</span><span class="op__toggle" aria-hidden="true"></span></span></summary>
+              <div class="op__body">
+                <p class="op__meta">Hack the 6ix · Aug 2024 · LangChain, RAG, Django</p>
+                <ul class="points">
+                  <li>Built a Streamlit app with financial trend charts and an integrated chatbot for ticker Q&amp;A.</li>
+                  <li>Implemented a LangChain RAG agent over embedded news headlines, indexed in MongoDB Atlas Vector Search for low-latency retrieval.</li>
+                  <li>Developed Django APIs for ingestion and analytics, pulling real-time market data from Finnhub and Yahoo Finance.</li>
+                  <li>Fine-tuned FinGPT (on Llama-2) for ticker-specific sentiment, complemented by VADER for lightweight scoring; deployed to GCP Cloud Run via Docker and GitHub Actions.</li>
+                </ul>
+                <p class="op__links"><a href="https://devpost.com/software/fin4all">Devpost<svg class="ico" aria-hidden="true"><use href="#i-ext"/></svg></a><a href="https://github.com/Sam120204/Fin4All">GitHub<svg class="ico" aria-hidden="true"><use href="#i-ext"/></svg></a></p>
+              </div>
+            </details>
+
+            <details class="op">
+              <summary><span class="op__row"><span class="op__n">07</span><span class="op__name">MedScan Mentor</span><span class="op__brief">CT-scan learning aid for medical students</span><span class="op__year">2024</span><span class="op__toggle" aria-hidden="true"></span></span></summary>
+              <div class="op__body">
+                <p class="op__meta">Ignition Hacks 2024 · Aug 2024 · YOLOv5, RAG, MongoDB</p>
+                <ul class="points">
+                  <li>Used YOLOv5 for real-time detection of brain tumours in CT scans to support medical students’ self-learning.</li>
+                  <li>Incorporated RAG over PubMed to bring up-to-date, relevant medical literature into the learning flow.</li>
+                  <li>Designed the MongoDB data architecture for user data and interaction history.</li>
+                </ul>
+                <p class="op__links"><a href="https://devpost.com/software/medscan-mentor">Devpost<svg class="ico" aria-hidden="true"><use href="#i-ext"/></svg></a><a href="https://github.com/BobZheng00/MedScan-Mentor">GitHub<svg class="ico" aria-hidden="true"><use href="#i-ext"/></svg></a></p>
+              </div>
+            </details>
+
+            <details class="op">
+              <summary><span class="op__row"><span class="op__n">06</span><span class="op__name">TrendSage</span><span class="op__brief">Reddit sentiment versus market trends</span><span class="op__year">2024</span><span class="op__toggle" aria-hidden="true"></span></span></summary>
+              <div class="op__body">
+                <p class="op__meta">Team project · May 2024 · Python, Streamlit, AWS</p>
+                <ul class="points">
+                  <li>Collected Reddit posts and comments with the Python Reddit API Wrapper and scored sentiment with VADER and TextBlob.</li>
+                  <li>Deployed with Streamlit, Docker and AWS, using MongoDB for data and Google Cloud Scheduler to automate data fetching.</li>
+                  <li>Built an analysis system and chatbot recommending tickers with three-day, one-week and one-month insights.</li>
+                </ul>
+                <p class="op__links"><a href="https://github.com/Sam120204/Stock_Trading_Reddit">GitHub<svg class="ico" aria-hidden="true"><use href="#i-ext"/></svg></a></p>
+              </div>
+            </details>
+
+            <details class="op">
+              <summary><span class="op__row"><span class="op__n">05</span><span class="op__name">Warrior Edu Scheduler</span><span class="op__brief">Discord bot for course calendars</span><span class="op__year">2024</span><span class="op__toggle" aria-hidden="true"></span></span></summary>
+              <div class="op__body">
+                <p class="op__meta">Discord bot · Feb 2024 · Node.js, TypeScript</p>
+                <ul class="points">
+                  <li>Built a Discord bot with Node.js and REST APIs so users can create, delete and share calendar events with quick commands.</li>
+                  <li>Used HTML parsing for fast course-information lookup, bringing academic schedules straight into users’ calendars.</li>
+                </ul>
+                <p class="op__links"><a href="https://github.com/BobZheng00/WarriorEduScheduler">GitHub<svg class="ico" aria-hidden="true"><use href="#i-ext"/></svg></a></p>
+              </div>
+            </details>
+
+            <details class="op">
+              <summary><span class="op__row"><span class="op__n">04</span><span class="op__name">DeltaLang Compiler</span><span class="op__brief">Compiler front end for a toy language</span><span class="op__year">2024</span><span class="op__toggle" aria-hidden="true"></span></span></summary>
+              <div class="op__body">
+                <p class="op__meta">Team project · Jan 2024 · C++, Jenkins, GoogleTest</p>
+                <ul class="points">
+                  <li>Developed a state-machine-based data structure and algorithm for token recognition and lexing, built to scale and adapt.</li>
+                  <li>Integrated test automation with Jenkins and GoogleTest to improve reliability and streamline continuous integration.</li>
+                </ul>
+                <p class="op__links"><a href="https://github.com/DDDDDelta/DeltaLangCompiler-test">GitHub<svg class="ico" aria-hidden="true"><use href="#i-ext"/></svg></a></p>
+              </div>
+            </details>
+
+            <details class="op">
+              <summary><span class="op__row"><span class="op__n">03</span><span class="op__name">Swordtail Quest</span><span class="op__brief">Multi-world platformer, hackathon winner</span><span class="op__year">2023</span><span class="op__toggle" aria-hidden="true"></span></span></summary>
+              <div class="op__body">
+                <p class="op__meta">North Shore Hacks, Project Winner · Oct – Nov 2023 · Python, Pygame, Tiled</p>
+                <ul class="points">
+                  <li>Developed a modular, multi-world platformer in Pygame following a sword-wielding mouse through four worlds, with maps built in the Tiled editor.</li>
+                  <li>Collaborated with music composers and visual artists, and served as code reviewer to keep the codebase readable and maintainable.</li>
+                </ul>
+                <p class="op__links"><a href="https://devpost.com/software/swordtail-quest-a-mousey-adventure">Devpost<svg class="ico" aria-hidden="true"><use href="#i-ext"/></svg></a><a href="https://github.com/BobZheng00/Swordtail-Quest">GitHub<svg class="ico" aria-hidden="true"><use href="#i-ext"/></svg></a></p>
+              </div>
+            </details>
+
+            <details class="op">
+              <summary><span class="op__row"><span class="op__n">02</span><span class="op__name">Delta’s Chess</span><span class="op__brief">Lightweight chess game</span><span class="op__year">2023</span><span class="op__toggle" aria-hidden="true"></span></span></summary>
+              <div class="op__body">
+                <p class="op__meta">Personal project · Jul – Aug 2023 · C++, SDL2</p>
+                <ul class="points">
+                  <li>Built a lightweight chess game in C++ with SDL2, fully object-oriented with an MVC architecture and minimal resource usage.</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="op">
+              <summary><span class="op__row"><span class="op__n">01</span><span class="op__name">Calendar Channel</span><span class="op__brief">Social web scheduler</span><span class="op__year">2022</span><span class="op__toggle" aria-hidden="true"></span></span></summary>
+              <div class="op__body">
+                <p class="op__meta">Ignition Hacks 2022 · Aug 2022 · Django, PostgreSQL, Docker</p>
+                <ul class="points">
+                  <li>Developed a web scheduler in Django with an optimized PostgreSQL schema supporting complex scheduling features and user-to-user interaction.</li>
+                  <li>Deployed on Fly.io with Docker for reliable access and continuous deployment from development to production.</li>
+                </ul>
+                <p class="op__links"><a href="https://github.com/BobZheng00/Web_Calendar">GitHub<svg class="ico" aria-hidden="true"><use href="#i-ext"/></svg></a></p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================= Skills -->
+    <section class="section section--sunk" id="skills" aria-labelledby="skills-title">
+      <div class="frame">
+        <div class="frame__side">
+          <div class="block">
+            <p class="block__tab">Section 05</p>
+            <p class="block__code" aria-hidden="true">STCK</p>
+            <h2 class="block__name" id="skills-title">Technical stack section</h2>
+          </div>
+          <p class="side-note">4 categories<br>Revised 2026.10</p>
+        </div>
+
+        <div class="frame__main">
+          <div class="grid4">
+            <section class="list-block" aria-labelledby="sk-lang"><h3 class="label" id="sk-lang">Languages</h3>
+              <ul class="plain"><li>Python</li><li>TypeScript</li><li>JavaScript</li><li>SQL</li><li>C / C++</li><li>Kotlin</li><li>Bash</li><li>R</li></ul></section>
+            <section class="list-block" aria-labelledby="sk-fw"><h3 class="label" id="sk-fw">Frameworks</h3>
+              <ul class="plain"><li>FastAPI</li><li>Next.js</li><li>React</li><li>Vite</li><li>Express.js</li><li>Node.js</li><li>Flask</li><li>Django</li><li>Streamlit</li><li>Jetpack Compose</li><li>Pygame</li><li>SDL2</li></ul></section>
+            <section class="list-block" aria-labelledby="sk-ml"><h3 class="label" id="sk-ml">AI / ML</h3>
+              <ul class="plain"><li>PyTorch</li><li>Transformers</li><li>Hugging Face</li><li>LangGraph</li><li>LangChain</li><li>Google ADK</li><li>LiveKit Agents</li><li>FAISS</li><li>scikit-learn</li><li>spaCy</li><li>TensorFlow</li><li>Pandas</li><li>NumPy</li></ul></section>
+            <section class="list-block" aria-labelledby="sk-ops"><h3 class="label" id="sk-ops">Infrastructure &amp; tools</h3>
+              <ul class="plain"><li>AWS</li><li>GCP</li><li>Azure</li><li>Docker</li><li>Kubernetes</li><li>PostgreSQL</li><li>MongoDB</li><li>Snowflake</li><li>Jenkins</li><li>CircleCI</li><li>Linux</li><li>Git</li><li>Figma</li></ul></section>
+          </div>
+
+          <div class="cols cols--even">
+            <section class="list-block" aria-labelledby="certs-title">
+              <h3 class="label" id="certs-title">Certifications</h3>
+              <ul class="dated">
+                <li><span class="dated__when">AWS</span><span>AWS Certified AI Practitioner</span></li>
+                <li><span class="dated__when">UR2PhD</span><span>Undergraduate Research Training Course</span></li>
+                <li><span class="dated__when">Coursera</span><span>Developing Front-End Apps with React</span></li>
+                <li><span class="dated__when">Coursera</span><span>Introduction to Cloud Computing</span></li>
+              </ul>
+            </section>
+            <section class="list-block" aria-labelledby="honors-title">
+              <h3 class="label" id="honors-title">Honours</h3>
+              <ul class="dated">
+                <li><span class="dated__when">2026</span><span>First author of VISPA, EMNLP 2026 Main Conference</span></li>
+                <li><span class="dated__when">2023</span><span>Project Winner at North Shore Hacks for Swordtail Quest</span></li>
+                <li><span class="dated__when">2023</span><span>Book Prize, Sir Isaac Newton Physics Exam (top 50 of 2,000+ worldwide)</span></li>
+                <li><span class="dated__when">2023</span><span>David Johnston International Student Entrance Scholarship ($5,000)</span></li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================ Contact -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="frame">
+        <div class="frame__side">
+          <div class="block">
+            <p class="block__tab">Section 06</p>
+            <p class="block__code" aria-hidden="true">CNTC</p>
+            <h2 class="block__name" id="contact-title">Contact section</h2>
+          </div>
+          <p class="side-note">Reply by email<br>Waterloo, Ontario</p>
+        </div>
+
+        <div class="frame__main">
+          <p class="lead">For internships, please email my Waterloo address. For anything else, either address works.</p>
+          <ul class="channels">
+            <li class="channel">
+              <a class="channel__link" href="mailto:b63zheng@uwaterloo.ca"><span class="channel__k">Primary email</span><span class="channel__v">b63zheng@<wbr>uwaterloo.ca</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              <button class="copy" type="button" data-copy="b63zheng@uwaterloo.ca" hidden>Copy</button>
+            </li>
+            <li class="channel">
+              <a class="channel__link" href="mailto:shenyanzheng00@gmail.com"><span class="channel__k">Personal email</span><span class="channel__v">shenyanzheng00@<wbr>gmail.com</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              <button class="copy" type="button" data-copy="shenyanzheng00@gmail.com" hidden>Copy</button>
+            </li>
+            <li class="channel"><a class="channel__link" href="https://github.com/BobZheng00"><span class="channel__k">GitHub</span><span class="channel__v">github.com/BobZheng00</span><svg class="ico" aria-hidden="true"><use href="#i-ext"/></svg></a></li>
+            <li class="channel"><a class="channel__link" href="https://www.linkedin.com/in/shenyan-zheng-0ab064274/"><span class="channel__k">LinkedIn</span><span class="channel__v">in/shenyan-zheng</span><svg class="ico" aria-hidden="true"><use href="#i-ext"/></svg></a></li>
+            <li class="channel"><a class="channel__link" href="assets/docs/Shenyan_Bob_Zheng_Resume.pdf"><span class="channel__k">Resume</span><span class="channel__v">PDF, September 2026</span><svg class="ico" aria-hidden="true"><use href="#i-down"/></svg></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <p><span class="dash" aria-hidden="true"></span>© 2026 Shenyan (Bob) Zheng</p>
+      <p>Last updated <time datetime="2026-10-10">2026.10.10</time></p>
+      <p><a href="https://github.com/BobZheng00/My_Site">Source<svg class="ico" aria-hidden="true"><use href="#i-ext"/></svg></a></p>
     </div>
-
-        <div style="height: 65px">
-        </div>
-
-
-<!--    <img src="./images/test.png" alt="lasagna">-->
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-    <script src="javascript/home.js"></script>
-    <script src="https://kit.fontawesome.com/cb5ca5da13.js" crossorigin="anonymous"></script>
-
-
-<div class="banner" id="banner">
-    <div class="box">
-        <h2>Welcome! :) It's me👋</h2>
-        <h1>Shenyan (or Bob)</h1>
-        <a>Programmer, enjoyer of Minecraft, 2nd year CS student @ the University of Waterloo.</a>
-    </div>
-
-    <hr class="hr">
-
-    <div class="link-box">
-
-        <button style="--clr:#ecf7ff" onclick="window.location.href='https://github.com/BobZheng00';"><span>&nbspGithub&nbsp&nbsp</span><i></i></button>
-        <img src="./images/github_icon.png"  alt="github"/>
-        <button style="--clr:#00b9ff" onclick="window.location.href='https://www.linkedin.com/in/shenyan-zheng-0ab064274';"><span>LinkedIn</span><i></i></button>
-        <img src="./images/linkedin_icon.png"  alt="linkedin"/>
-        <button style="--clr:#f52c2c" onclick="window.location.href='mailto:shenyanzheng00@gmail.com';"><span>&nbsp&nbspEmail&nbsp&nbsp&nbsp</span><i></i></button>
-        <img src="./images/gmail_icon.png" />
-    </div>
-
-    <div class="photo-box">
-        <img style="width: 90%; opacity: 100%" src="./images/identification_photo.jpg"  alt="identification" />
-    </div>
-</div>
-
-        <div class="about-me-grid" id="about">
-
-                <div class="column">
-                    <h2>
-                        <i class="fa-sharp fa-solid fa-pen"></i>
-                        <a>Current Courses</a>
-                    </h2>
-                     <p>CS 246 - Obj-Oriented Soft Dev</p>
-                    <p>CS 245 - Logic & Computation</p>
-                    <p>ECON 101 - Intro Microeconomics</p>
-                    <p>ECON 102 - Intro Macroeconomics</p>
-                    <p>MATH 239 - Intro Combinatorics</p>
-                </div>
-
-                <div class="column">
-                    <h2>
-                        <i class="fa-sharp fa-solid fa-code"></i>
-                        <a>Programming Expertise</a>
-                    </h2>
-                    <span style="margin-top: 4%">Languages:&nbsp</span><p>JavaScript/TypeScript, Python, C/C++, HTML, CSS,  Shell Script, SQL, R</p>
-                    <span>Frameworks:&nbsp</span><p>Django, Node.js, Pygame, SDL2, React, Express.js, Flask, Pandas, NumPy</p>
-                    <span>Tools:&nbsp</span><p>Linux, Git, Docker, Fly.io, MongoDB, AWS, Google Cloud, Jenkins, Excel, Wix.com</p>
-                </div>
-
-
-        </div>
-
-    <h2 class="project-main-header" id="projects">My Projects</h2>
-    <div class="projects">
-
-        <div class="project-card">
-            <div class="project-header">
-                <h3><a href="https://github.com/Sam120204/Stock_Trading_Reddit">TrendSage</a></h3>
-            </div>
-            <p class="project-description">TrendSage aims to develop a correlation between stock and cryptocurrency predictions based on the posts or comments on Reddit and the actual market trends...</p>
-            <p class="project-date">May 2024 - present</p>
-            <div class="project-icons">
-                <span><img src="./images/python.svg" /></span>
-                <span><img src="./images/pytorch-ar21.svg" /></span>
-                <span><img src="./images/amazon.svg" /></span>
-                <span><img src="./images/docker.svg" /></span>
-            </div>
-        </div>
-        <div class="project-card">
-            <div class="project-header">
-                <h3><a href="https://github.com/BobZheng00/Web_Calendar">Calendar Channel</a></h3>
-            </div>
-            <p class="project-description">Calendar Channel, a Django-based web scheduler designed to enhance user interaction. This platform allows users to effortlessly share, block, and download their schedules...</p>
-            <p class="project-date">Aug 2022 - present</p>
-            <div class="project-icons">
-                <span><img src="./images/python.svg" /></span>
-                <span><img src="./images/django.svg" /></span>
-                <span><img src="./images/docker.svg" /></span>
-                <span><img src="./images/postgresql.svg" /></span>
-            </div>
-        </div>
-        <div class="project-card">
-            <div class="project-header">
-<!--                <span class="project-icon">📘</span>-->
-                <h3><a href="https://github.com/DDDDDelta/DeltaLangCompiler-test">DeltaLang Compiler</a></h3>
-            </div>
-            <p class="project-description">DeltaLang Compiler developed an efficient, state machine-based data structure and algorithm, enhancing scalability and adaptability in token recognition and lexing...</p>
-            <p class="project-date">Jan 2024 - present</p>
-            <div class="project-icons">
-                <span><img src="./images/CPlusPlus.svg" /></span>
-                <span><img src="./images/LLVM-Logo-Derivative-2.png" /></span>
-                <span><img src="./images/742px-Jenkins_logo.svg.png" /></span>
-            </div>
-        </div>
-
-    </div>
-
-<div class="experience" id="experience">
-    <div class="timeline">
-        <h2 class="timeline-header">My Experience</h2>
-        <div class="timeline__event animate__animated animate__fadeInUp animate__delay-3s timeline__event--type1">
-            <div class="timeline__event__icon ">
-                <i class="lni-cake"></i>
-                <div class="timeline__event__date">
-                    May 2024 - present
-                </div>
-            </div>
-            <div class="timeline__event__content ">
-                <div class="timeline__event__title">
-                    AI Software Developer Intern - Machine Learning Project
-                </div>
-                <div class="timeline__event__location">
-                    JuniorKids
-                </div>
-                <div class="timeline__event__description">
-                    <p>• Utilized Python Reddit API Wrapper to gather posts/comments and performed text embedding and sentiment analysis to determine sentiment scores.</p>
-                    <p>• Developed a machine learning model based on BERT using PyTorch to better extract and analyze Reddit posts' sentiment towards stock and cryptocurrency trends and convert to embeddings.</p>
-                    <p>• Utilized Streamlit, Docker, and AWS to create a web-based solution, further automated data fetching and analysis process with Google Cloud for enhanced error detection and efficiency.</p>
-                </div>
-            </div>
-        </div>
-        <div class="timeline__event animate__animated animate__fadeInUp animate__delay-2s timeline__event--type2">
-            <div class="timeline__event__icon">
-                <i class="lni-burger"></i>
-                <div class="timeline__event__date">
-                    Feb 2024 - Present
-                </div>
-            </div>
-            <div class="timeline__event__content">
-                <div class="timeline__event__title">
-                    IT Developer and Tech Support
-                </div>
-                <div class="timeline__event__location">
-                    Domestic Violence Victim’s Alliance
-                </div>
-                <div class="timeline__event__description">
-                    <p>• Spearhead the deployment of workbook automation using Google’s Apps Script to enhance procedural efficiencies and
-                        streamline IT operations.</p>
-                    <p>• Provide hardware and software technical support, resolving issues for volunteers when training and using scheduling app.</p>
-                </div>
-            </div>
-        </div>
-        <div class="timeline__event animate__animated animate__fadeInUp animate__delay-1s timeline__event--type3">
-            <div class="timeline__event__icon">
-                <i class="lni-burger"></i>
-                <div class="timeline__event__date">
-                    Oct 2022 - Jun 2023
-                </div>
-            </div>
-            <div class="timeline__event__content">
-                <div class="timeline__event__title">
-                    Engineering Club Executive - Event Coordinator
-                </div>
-                <div class="timeline__event__location">
-                    Mentor College
-                </div>
-                <div class="timeline__event__description">
-                    <p>• Managed the Engineering Club’s members, events, and budget through tracking and allocation in Excel</p>
-                    <p>• Proactively communicated with colleagues, supervisory teachers, and the school board to ensure transparent and compliant execution of all club activities, facilitating smooth operations and fostering a collaborative environment.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
+  </footer>
 </body>
 </html>

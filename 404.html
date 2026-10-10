@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Not found | Bob Zheng</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#efeee7">
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAACr0lEQVR4nOyZX0hTURjATyW7VLASXAQ6DTZ6kUHoYMYexnyzEPdwISPBLZh7sj+0rFCEymV/hKhBsg2yG4VCIxaWUZCxhzmiqMAkcFtQrgfxQbzB8o6CZt3NsznDe+/Gh/D9ns53zj139/edb99gt2L3nkqymdlKNjkoAA0KQIMC0KAANCgADQpAgwLQoAA0KAANCkCDAtBUEKkMTnxjdf+7QODjH19y13q56dyUZzLG6skG4KMDjXY/kUAZToBR603s5dEI56wh5adsJcRUWR397UQiv4lApCG9hPLg3wcujcyKQa2xw247oGGyi5r6FhsZC2VGydhsosjunRp9tZq+WyTQxxFpKBQgPxfGn4SyQWhc2Pe2z5R7JpVKHA67Dg8X7qw7PvroHPXFSMeD7qOBJJGIUoF8LIa9VEZTX6bur3NhXavXd9pM/a3Mv7nZeSFMpKNQQG0+Mx07lY22qZhc/WQyOnHHW3yX5brvSptOlYuFRLC74+4ckYPiE2BUTLHpuecXm4tntKbrwVA79fRkMXrD1fuayKRcXUjb4vn0uN+6Zt466D9rospMSIydt/u/EtkoPIF0PPxiZjEbMVX1xka9Rsyu2nBs4HbYfGL1HLTOe15WR50YH7nV1TNJlKBQYHk+4u4eoWdYbspj1YiBtsnRScJiZ2z2cCcPUsmX2XYKKG0XyvB9OU1FO3Zp/w0yTfMqq6eTL7ftFKBUYLumtc0mjmsNFmOTxVpNLaeW/vaWTNvJa5rkF79UyXLP2DX3+/EucKQnRDaO0jba4BxqWH954cPTlfpxOA7RbWflY9Xa/epiO/h5ie8cS15Cq/CfH7pdQVJmSi8gpHg+OfMq5PMGovJ+mySxBd8TA4MC0KAANCgADQpAgwLQoAA0KAANCkCDAtCgADQoAM0fAAAA///XBl9cAAAABklEQVQDAOZUtJhQvoMsAAAAAElFTkSuQmCC">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..500&amp;family=Montserrat:wght@500..800&amp;display=swap">
+  <!-- Self-contained on purpose: this page is served for missing paths at any depth, so relative asset URLs would break. -->
+  <style>
+    :root { --ground: #efeee7; --ink: #141612; --block: #101611; --ink-2: #3d413b; --ink-3: #61655e; --rule: #cfcdc5; --rule-2: #b4b2a9; --on: #f2f1ea; --tab: #d3d5cf; --lime: #9bd62a; color-scheme: light; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; min-height: 100svh;
+      display: grid; grid-template-columns: minmax(0, 1fr);
+      background: var(--ground); color: var(--ink);
+      font: 400 16px/1.6 Inter, "Helvetica Neue", Arial, sans-serif;
+    }
+    main { display: grid; grid-template-columns: minmax(0, 260px) minmax(0, 1fr); gap: 0 56px; align-self: center; width: min(1040px, 100%); margin: 0 auto; padding: 64px 24px; }
+    .block { position: relative; align-self: start; display: grid; align-content: end; min-height: 172px; padding: 22px 18px 16px; background: var(--block); color: var(--on); font-family: Montserrat, sans-serif; }
+    .block::after { content: ""; position: absolute; top: 12px; right: 12px; width: 7px; height: 7px; border-radius: 50%; background: #c4c8c0; }
+    .tab { position: absolute; top: -11px; left: 18px; padding: 6px 10px 5px; background: var(--tab); color: var(--ink-2); font: 600 10px/1 Montserrat, sans-serif; letter-spacing: .14em; text-transform: uppercase; }
+    .code { font: 800 58px/.86 Montserrat, sans-serif; letter-spacing: -.01em; }
+    .name { margin-top: 12px; font: 600 10.5px/1.3 Montserrat, sans-serif; letter-spacing: .1em; text-transform: uppercase; color: #c4c8c0; }
+    .body { padding-left: 56px; border-left: 1px solid var(--rule-2); }
+    .role { margin: 0 0 8px; font: 600 11px/1.2 Montserrat, sans-serif; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); }
+    h1 { margin: 0; font: 800 clamp(40px, 6vw, 72px)/.9 Montserrat, sans-serif; letter-spacing: -.02em; text-transform: uppercase; }
+    .hair { height: 1px; margin: 18px 0 12px; background: var(--ink); }
+    .path { margin: 0; font: 500 12px/1.4 Montserrat, sans-serif; letter-spacing: .06em; color: var(--ink-2); overflow-wrap: anywhere; }
+    p.note { margin: 28px 0 32px; max-width: 40ch; font-size: 18px; line-height: 1.45; }
+    a.btn { display: inline-flex; align-items: center; gap: 14px; min-height: 48px; padding: 0 20px; border: 1px solid var(--block); background: var(--block); color: var(--on); text-decoration: none; font: 600 12px/1 Montserrat, sans-serif; letter-spacing: .12em; text-transform: uppercase; transition: background-color .2s, color .2s; }
+    a.btn:hover { background: transparent; color: var(--ink); }
+    a.btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+    @media (max-width: 720px) {
+      main { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+      .block { max-width: 252px; }
+      .body { padding-left: 0; border-left: 0; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="block" aria-hidden="true"><span class="tab">Error</span><span class="code">404</span><span class="name">Not found section</span></div>
+    <div class="body">
+      <p class="role">Request status</p>
+      <h1>Page not found</h1>
+      <div class="hair" aria-hidden="true"></div>
+      <p class="path" id="path">This address</p>
+      <p class="note">Nothing lives at this address. The portfolio is a single page, so head back to the index.</p>
+      <a class="btn" id="home" href="/">Back to the index <span aria-hidden="true">→</span></a>
+    </div>
+  </main>
+  <script>
+    document.getElementById('path').textContent = location.pathname;
+  </script>
+</body>
+</html>
